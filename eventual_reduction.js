@@ -1,11 +1,12 @@
 const readline = require('readline');
 const process = require('process');
-(async function main() {
+(function(){
     var test_cases;
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-    await rl.question(`Test Cases?\t`, (value) => test_cases = Number(value));
+     rl.question(`Test Cases?\t`, (value) => test_cases = Number(value));
     while (test_cases--) {
         var n, s;
+        console.log('here')
         rl.question(`Enter n?\t`, (value) => {
             n = Number(value);
             rl.question(`TEnter string?\t`, (data) => s = data);
